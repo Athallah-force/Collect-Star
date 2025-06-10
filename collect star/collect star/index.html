@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collect Star Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.js"></script>
+    <script src="game.js"></script>
+</head>
+<body>
+    <script>
+    window.onload = function () {
+      const config = {
+        type: Phaser.AUTO,
+        width: 960,
+        height: 720,
+        physics: {
+          default: "arcade",
+          arcade: {
+            gravity: { y: 300 },
+            debug: false,
+          },
+        },
+        scene: [gameScene], 
+      };
+
+      const game = new Phaser.Game(config);
+    };
+    </script>
+</body>
+</html>
